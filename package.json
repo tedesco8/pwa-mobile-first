@@ -3,7 +3,7 @@
   "homepage": "https://demos.creative-tim.com/vue-notus/",
   "version": "1.0.0",
   "description": "Vue Notus - A free Tailwind CSS and VueJS UI Kit and Admin by Creative Tim.",
-  "repository": "https://github.com/creativetimofficial/vue-notus",
+  "repository": "https://github.com/tedesco8/landing-inglesdesdecero",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
