@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div>
+      <BaseLink />
       <Logo />
       <h1 class="title">inglesdesdecero</h1>
       <div class="links">
