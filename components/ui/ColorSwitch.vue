@@ -3,9 +3,14 @@
     {{ $colorMode.preference }}
     <IconDark
       v-if="$colorMode.preference != 'dark'"
+      class="cursor-pointer fill-white"
       @click="changeTheme('dark')"
     />
-    <IconLight v-else @click="changeTheme('light')" />
+    <IconLight
+      v-else
+      class="cursor-pointer fill-white text-white"
+      @click="changeTheme('light')"
+    />
   </div>
 </template>
 
