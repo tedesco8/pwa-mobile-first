@@ -8,17 +8,23 @@
     <div
       class="login-body mt-12 pt-56 h-full flex flex-col items-center bg-light dark:bg-blue-main-800"
     >
-      <!-- <SocialLoginButton
+      <SocialLoginButton
         text="Iniciar sesión con google"
         @click="loginWithGoogle"
-      /> -->
-      <p>iniciar sesión con google</p>
+        class="m-2"
+      />
+      <SocialLoginButton
+        type="facebook"
+        text="Iniciar sesión con facebook"
+        @click="loginWithFacebook"
+        class="m-2"
+      />
     </div>
   </div>
 </template>
 
 <script>
-// import SocialLoginButton from '~/components/auth/SocialLoginButton.vue'
+import SocialLoginButton from '~/components/auth/SocialLoginButton.vue'
 import ColorSwitch from '~/components/ui/ColorSwitch.vue'
 
 export default {
@@ -26,20 +32,21 @@ export default {
   layout: 'auth',
   components: {
     ColorSwitch,
-    // SocialLoginButton,
+    SocialLoginButton,
   },
-  //   methods: {
-  //     async loginWithGoogle() {
-  //       try {
-  //         const provider = new this.$fireAuthObj.GoogleAuthProvider()
-  //         const result = await this.$fireAuth.signInWithPopup(provider)
-  //         console.log(result)
-  //       } catch (error) {
-  //         // TODO: show toast
-  //         console.error('login error', error)
-  //       }
-  //     },
-  //   },
+  methods: {
+    async loginWithGoogle() {
+      // try {
+      //   const provider = new this.$fireAuthObj.GoogleAuthProvider()
+      //   const result = await this.$fireAuth.signInWithPopup(provider)
+      //   console.log(result)
+      // } catch (error) {
+      //   // TODO: show toast
+      //   console.error('login error', error)
+      // }
+    },
+    async loginWithFacebook() {},
+  },
 }
 </script>
 
