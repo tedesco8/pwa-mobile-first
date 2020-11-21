@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-      <ColorSwitch />
-      <Logo />
-    </div>
+    <ColorSwitch />
+    <Logo />
   </div>
 </template>
