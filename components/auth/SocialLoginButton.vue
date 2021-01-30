@@ -15,12 +15,13 @@ export default {
   components: {
     GoogleIcon: () => import('../../assets/icons/google.svg?inline'),
     FacebookIcon: () => import('../../assets/icons/facebook.svg?inline'),
+    EmailIcon: () => import('../../assets/icons/email.svg?inline'),
   },
   props: {
     type: {
       type: String,
       default: 'google',
-      validate: (value) => ['google', 'facebook'].includes(value),
+      validate: (value) => ['google', 'facebook', 'email'].includes(value),
     },
     text: {
       type: String,
@@ -31,6 +32,7 @@ export default {
     socialOptions: {
       google: 'GoogleIcon',
       facebook: 'FacebookIcon',
+      email: 'EmailIcon',
     },
   }),
   computed: {

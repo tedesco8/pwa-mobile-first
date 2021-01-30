@@ -1,7 +1,7 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'inglesdesdecero',
+    title: 'PWA Mobile First',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,6 +19,16 @@ export default {
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
+  env: {
+    VUE_APP_FIREBASE_KEY: process.env.VUE_APP_FIREBASE_KEY,
+    VUE_APP_FIREBASE_DOMAIN: process.env.VUE_APP_FIREBASE_DOMAIN,
+    VUE_APP_FIREBASE_URL_DATABASE: process.env.VUE_APP_FIREBASE_URL_DATABASE,
+    VUE_APP_FIREBASE_PROJECT: process.env.VUE_APP_FIREBASE_PROJECT,
+    VUE_APP_FIREBASE_STORAGE: process.env.VUE_APP_FIREBASE_STORAGE,
+    VUE_APP_FIREBASE_MESSAGIN: process.env.VUE_APP_FIREBASE_MESSAGIN,
+    VUE_APP_FIREBASE_APP_ID: process.env.VUE_APP_FIREBASE_APP_ID,
+    VUE_APP_FIREBASE_ASUREMENT_ID: process.env.VUE_APP_FIREBASE_ASUREMENT_ID,
+  },
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
@@ -39,6 +49,29 @@ export default {
     '@nuxtjs/pwa',
     // https://github.com/nuxt-community/svg-module#readme
     '@nuxtjs/svg',
+    // https://firebase.nuxtjs.org/guide/getting-started
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: process.env.VUE_APP_FIREBASE_KEY,
+          authDomain: process.env.VUE_APP_FIREBASE_DOMAIN,
+          databaseURL: process.env.VUE_APP_FIREBASE_URL_DATABASE,
+          projectId: process.env.VUE_APP_FIREBASE_PROJECT,
+          storageBucket: process.env.VUE_APP_FIREBASE_STORAGE,
+          messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGIN,
+          appId: process.env.VUE_APP_FIREBASE_APP_ID,
+          measurementId: process.env.VUE_APP_FIREBASE_ASUREMENT_ID,
+        },
+        services: {
+          auth: true,
+          firestore: true,
+          storage: true,
+          analytics: true,
+          performance: true,
+        },
+      },
+    ],
   ],
 
   colorMode: {

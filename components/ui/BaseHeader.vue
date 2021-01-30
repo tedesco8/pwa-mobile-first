@@ -6,7 +6,7 @@
         alt=""
         class="w-6 mr-3"
       />
-      <h1 class="font-bold text-base">English - Desde Cero</h1>
+      <h1 class="font-bold text-base">Tu tienda online</h1>
     </nuxt-link>
     <nuxt-link class="hidden md:block" to="/profile">
       <img
