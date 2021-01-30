@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import firebase from 'firebase/app'
 import SocialLoginButton from '~/components/auth/SocialLoginButton.vue'
 import ColorSwitch from '~/components/ui/ColorSwitch.vue'
 
@@ -54,7 +55,8 @@ export default {
     },
     async loginWithGoogle() {
       try {
-        const provider = this.$fire.authObj.GoogleAuthProvider()
+        const provider = new firebase.auth.GoogleAuthProvider()
+        debugger
         const result = await this.$fire.auth.signInWithPopup(provider)
         console.log(result)
       } catch (error) {
